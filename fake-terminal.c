@@ -20,7 +20,8 @@ int main(void)
     input[strlen(input) - 1] = '\0';
     printf("INPUT: %s\n", input);
 
-    pid_t pid = fork(); /* create pid variable which holds process id */
+    pid_t pid = fork(); /* create pid variable which holds process id*/
+	/* ^ fork() a child process; create a child process */
 
     if (pid == 0) {
       execvp(input, &input);
